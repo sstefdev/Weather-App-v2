@@ -10,7 +10,8 @@ class UI {
   }
 
   paint(weather) {
-    this.location.textContent = weather.location.name;
+    this.location.textContent =
+      weather.location.name + ", " + weather.location.country;
     this.desc.textContent = weather.current.condition.text;
     this.string.textContent = weather.current.temp_c + "℃";
     this.icon.setAttribute("src", weather.current.condition.icon);
